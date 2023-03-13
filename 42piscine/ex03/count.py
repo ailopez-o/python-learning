@@ -3,7 +3,7 @@ import string
 
 def text_analyzer(data = None):
     
-	"""_summary_
+	"""
 	text_analyzer("Python 2.0, released 2000, introduced
 	features like List comprehensions and a garbage collection system capable of collecting reference cycles.")
 	The text contains 143 character(s): - 2 upper letter(s)
@@ -11,11 +11,15 @@ def text_analyzer(data = None):
 	- 4 punctuation mark(s)
 	- 18 space(s)
 	""" 
+ 
+	if	not isinstance(data, str):
+		print("AssertionError: argument is not a string")
+		exit(1)
 	while (data == None or not data or data == ""):
 		data = input("Introcuce una cadena: ")
 	num_upper = sum(1 for elem in data if elem.isupper())
 	num_lower = sum(1 for elem in data if elem.islower())
-	num_space = sum(1 for elem in data if elem.isspace)
+	num_space = sum(1 for elem in data if elem.isspace())
 	num_dot = sum(1 for elem in data if (elem in string.punctuation))
 	print(f"- {num_upper} upper letter(s)\n- {num_lower} lower letter(s)\n- {num_dot} punctuation mark(s)\n- {num_space} space(s)")
 
