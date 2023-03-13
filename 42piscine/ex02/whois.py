@@ -5,11 +5,14 @@ if __name__ == "__main__":
 	if (len(sys.argv) > 2):
 		print("AssertionError: more than one argument are provided")
 		exit()
-	elif not sys.argv[1].isdigit():
-		print("AssertionError: argument is not an integer")
-	elif ((int)(sys.argv[1]) == 0):
+	try:
+		num = (int)(sys.argv[1])
+	except ValueError:
+		print ("Is not a number")
+		exit(1)
+	if (num == 0):
 		print("I'm Zero.")
-	elif ((int)(sys.argv[1]) % 2 == 0):
+	elif (num % 2) == 0:
 		print("I'm Even.") 
 	else:
 		print("I'm Odd.")
