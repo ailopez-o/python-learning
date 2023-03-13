@@ -3,13 +3,11 @@ import sys
 if __name__ == "__main__":
 
 	if (len(sys.argv) > 2):
-		print("AssertionError: more than one argument are provided")
-		exit()
+		exit(print("AssertionError: more than one argument are provided"))
 	try:
 		num = (int)(sys.argv[1])
 	except ValueError:
-		print ("Is not a number")
-		exit(1)
+		exit(print ("Is not a number"))
 	if (num == 0):
 		print("I'm Zero.")
 	elif (num % 2) == 0:

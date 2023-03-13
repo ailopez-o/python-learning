@@ -13,8 +13,7 @@ def text_analyzer(data = None):
 	""" 
  
 	if	not isinstance(data, str):
-		print("AssertionError: argument is not a string")
-		exit(1)
+		exit(print("AssertionError: argument is not a string"))
 	while (data == None or not data or data == ""):
 		data = input("Introcuce una cadena: ")
 	num_upper = sum(1 for elem in data if elem.isupper())
@@ -26,8 +25,7 @@ def text_analyzer(data = None):
 if __name__ == "__main__":
 
 	if (len(sys.argv) > 2):
-		print("Incorrect arguments")
-		exit(1)
+		exit(print("Incorrect arguments"))
 	elif(len(sys.argv) == 1):
 		text_analyzer()
 	else:

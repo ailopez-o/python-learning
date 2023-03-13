@@ -4,7 +4,6 @@ try:
 	for	value in kata:
 		(int)(value)
 except ValueError:
-    print(f"Formar Error")
-    exit(1)
+    exit(print(f"Formar Error"))
 print("The 3 numbers are:", str(kata).replace('(', '').replace(')', ''))
 	
